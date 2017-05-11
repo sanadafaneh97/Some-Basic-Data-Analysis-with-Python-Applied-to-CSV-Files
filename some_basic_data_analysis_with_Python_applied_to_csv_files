@@ -1,0 +1,44 @@
+''' Let's say we have a csv file called Book1 that has the following table:-
+    a    	  b	    c	    d
+    100  	  4	    5	    64
+    22	    77	  66	  777
+    3	      339	  5	     32457
+
+    And we want to read it on Python, then conduct a few simple alterations ... '''
+
+
+import numpy as np
+import pandas as pd 
+
+data_file = pd.read_csv('Book1.csv')
+print(data_file)
+print(np.mean(data_file, 1))    # To print avergae value of rows
+print(np.mean(data_file, 0))     # To print avergae value of columns
+
+print(data_file.columns)         # To print column names as list
+
+# To rename the columns 
+data_file_cols = ['A', 'B', 'C', 'D']
+data_file.columns = data_file_cols
+print(data_file.head())
+
+print(data_file['C'].max())    # To print the max. value in column C
+print(data_file['C'].min())    # To print the min. value in column C
+
+print(data_file.describe())
+''' The above command prints:-
+    1. How many elements in each column
+    2. The mean of each column
+    3. The standard deviation for each column
+    4. The minimum value in each column
+    5. The 25th percentile of each column
+    6. The median value of each column
+    7. The 75th percentile of each column
+    8. The maximum value in each column
+'''
+# To create the "altered csv file:- 
+data_file.to_csv("ABCD.csv")
+
+# To create a csv file out of the output of line 28:- 
+describe_file = data_file.describe()
+describe_file.to_csv("SUMMARY-ABCD.csv")
