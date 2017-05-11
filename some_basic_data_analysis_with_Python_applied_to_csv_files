@@ -10,7 +10,7 @@
 import numpy as np
 import pandas as pd 
 
-data_file = pd.read_csv('Book1.csv')
+data_file = pd.read_csv("C:\Users\Owner\Desktop\Book1.csv")
 print(data_file)
 print(np.mean(data_file, 1))    # To print avergae value of rows
 print(np.mean(data_file, 0))     # To print avergae value of columns
@@ -41,4 +41,4 @@ data_file.to_csv("ABCD.csv")
 
 # To create a csv file out of the output of line 28:- 
 describe_file = data_file.describe()
-describe_file.to_csv("SUMMARY-ABCD.csv")
+describe_file.to_csv("C:\Users\Owner\Desktop\SUMMARY-ABCD.csv")
