@@ -1,8 +1,8 @@
 ''' Let's say we have a csv file called Book1 that has the following table:-
-    a    	  b	      c	         d
-    100  	  4	      5	        64
-    22	      77	  66	    777
-    3	      339	  5	        32457
+    a    	           b	                      c	                                         d
+    100  	           4	                      5	                                         64
+    22	               77	                      66	                                     777
+    3	               339	                      5	                                        32457
 
     And we want to read it on Python, then conduct a few simple alterations ... '''
 
